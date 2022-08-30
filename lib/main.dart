@@ -23,8 +23,10 @@ class HomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Fluterando'),
+    return const Material(
+      child: Center(
+        child: Text('Fluterando'),
+      ),
     );
   }
 }
