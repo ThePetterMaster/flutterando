@@ -10,8 +10,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Center(
+        child: HomeWidget(),
+      ),
+    );
+  }
+}
+
+class HomeWidget extends StatelessWidget {
+  const HomeWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return const Center(
-      child: Text('Fluterando', textDirection: TextDirection.rtl),
+      child: Text('Fluterando'),
     );
   }
 }
