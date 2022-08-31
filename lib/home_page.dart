@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
+  final names = ['Abraão', 'Isaque', 'Jacó'];
   var counter = 0;
 
   @override
@@ -45,18 +46,16 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Home'),
       ),
       body: SizedBox(
-        //height: double.infinity,
-        //width: double.infinity,
-        child: ListView(
-          children: [
-            for (var i = 0; i < 10; i++)
-              Container(
-                width: 80,
-                height: 80,
-                margin: const EdgeInsets.all(12),
-                color: Colors.red,
-              ),
-          ],
+        // height: double.infinity,
+        // width: double.infinity,
+        child: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) {
+            final name = names[index];
+            return ListTile(
+              title: Text(name),
+            );
+          },
         ),
       ),
       floatingActionButton:
