@@ -44,8 +44,31 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: Center(
-        child: Text('Fluterando $counter'),
+      body: SizedBox(
+        height: double.infinity,
+        //width: double.infinity,
+        child: Row(
+          //Column
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: 80,
+              height: 80,
+              color: Colors.red,
+            ),
+            Container(
+              width: 80,
+              height: 80,
+              color: Colors.blue,
+            ),
+            Container(
+              width: 80,
+              height: 80,
+              color: Colors.green,
+            ),
+          ],
+        ),
       ),
       floatingActionButton:
           // ignore: avoid_print
