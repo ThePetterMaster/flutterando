@@ -46,28 +46,22 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SizedBox(
         height: double.infinity,
-        //width: double.infinity,
-        child: Row(
-          //Column
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              width: 80,
-              height: 80,
-              color: Colors.red,
-            ),
-            Container(
-              width: 80,
-              height: 80,
-              color: Colors.blue,
-            ),
-            Container(
-              width: 80,
-              height: 80,
-              color: Colors.green,
-            ),
-          ],
+        width: double.infinity,
+        child: SingleChildScrollView(
+          child: Column(
+            //Column
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              for (var i = 0; i < 10; i++)
+                Container(
+                  width: 80,
+                  height: 80,
+                  margin: const EdgeInsets.all(12),
+                  color: Colors.red,
+                ),
+            ],
+          ),
         ),
       ),
       floatingActionButton:
