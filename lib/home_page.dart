@@ -45,23 +45,18 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Home'),
       ),
       body: SizedBox(
-        height: double.infinity,
-        width: double.infinity,
-        child: SingleChildScrollView(
-          child: Column(
-            //Column
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              for (var i = 0; i < 10; i++)
-                Container(
-                  width: 80,
-                  height: 80,
-                  margin: const EdgeInsets.all(12),
-                  color: Colors.red,
-                ),
-            ],
-          ),
+        //height: double.infinity,
+        //width: double.infinity,
+        child: ListView(
+          children: [
+            for (var i = 0; i < 10; i++)
+              Container(
+                width: 80,
+                height: 80,
+                margin: const EdgeInsets.all(12),
+                color: Colors.red,
+              ),
+          ],
         ),
       ),
       floatingActionButton:
