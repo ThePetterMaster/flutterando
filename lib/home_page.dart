@@ -32,42 +32,31 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  var counter = 0;
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
-      body: SizedBox(
-        //height: double.infinity,
-        //width: double.infinity,
-        child: ListView(
-          children: [
-            for (var i = 0; i < 10; i++)
-              Container(
-                width: 80,
-                height: 80,
-                margin: const EdgeInsets.all(12),
-                color: Colors.red,
-              ),
-          ],
+        appBar: AppBar(
+          title: const Text('Home'),
         ),
-      ),
-      floatingActionButton:
-          // ignore: avoid_print
-          FloatingActionButton(
-              child: const Icon(Icons.add),
-              onPressed: () {
-                setState(() {
-                  counter++;
-                });
-              }),
-    );
+        body: Center(
+            child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              color: Colors.red,
+              width: 100,
+              height: 100,
+            ),
+            Container(
+              color: Colors.blue,
+              width: 70,
+              height: 70,
+            ),
+            Container(
+              color: Colors.yellow,
+              width: 50,
+              height: 50,
+            )
+          ],
+        )));
   }
 }
