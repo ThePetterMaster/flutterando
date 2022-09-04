@@ -41,10 +41,11 @@ class _HomePageState extends State<HomePage> {
             child: Stack(
           alignment: Alignment.center,
           children: [
-            Container(
-              color: Colors.red,
-              width: 100,
-              height: 100,
+            SizedBox(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Image.network('https://wallpapercave.com/wp/wp2817765.png',
+                  fit: BoxFit.cover),
             ),
             Container(
               color: Colors.blue,
