@@ -44,8 +44,7 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
-              child: Image.network('https://wallpapercave.com/wp/wp2817765.png',
-                  fit: BoxFit.cover),
+              child: Image.asset('assets/download.jpg', fit: BoxFit.cover),
             ),
             Container(
               color: Colors.blue,
